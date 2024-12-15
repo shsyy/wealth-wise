@@ -1,0 +1,382 @@
+/* General Styling */
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom right, #4CAF50, #2E7D32);
+    color: #333;
+}
+
+h1, h2, h3 {
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    text-align: center;
+    color: #f5f5f5;
+    margin-bottom: 20px;
+}
+
+/* Logo Styling */
+.logo-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.logo {
+    width: 120px;
+    height: auto;
+    margin-bottom: 10px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Intro Section */
+.intro-container {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    margin: 20px auto;
+    max-width: 900px;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    animation: slideIn 1.2s ease-in-out;
+}
+
+.feature-list {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.feature-list li {
+    background: #e8f5e9;
+    margin: 10px auto;
+    padding: 12px;
+    border-radius: 10px;
+    border-left: 5px solid #388e3c;
+    max-width: 700px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    font-size: 1rem;
+    color: #333;
+    transition: transform 0.3s ease-in-out;
+}
+
+.feature-list li:hover {
+    transform: scale(1.05);
+}
+
+/* Transaction Card */
+.transaction-card {
+    background: #ffffff;
+    width: 90%;
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+label {
+    font-weight: 600;
+    color: #333;
+}
+
+input, select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(50% - 10px);
+    font-size: 0.9rem;
+}
+
+.add-btn {
+    flex: 1 1 100%;
+    padding: 12px;
+    background: linear-gradient(to right, #43A047, #388E3C);
+    color: #fff;
+    font-weight: 600;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.add-btn:hover {
+    background: linear-gradient(to right, #388E3C, #2E7D32);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+th {
+    background: #43A047;
+    color: #fff;
+    font-weight: 600;
+}
+
+tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+tr:hover {
+    background: #e8f5e9;
+}
+
+.search-filter {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+#search {
+    flex: 1 1 70%;
+    margin-right: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+#filter-type {
+    flex: 1 1 28%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+/* Animations */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* General Styling */
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background: linear-gradient(to bottom right, #4CAF50, #2E7D32);
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.transaction-card {
+    background: #fff;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    max-width: 900px;
+}
+
+/* Filter Group */
+.filter-group {
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.filter-group input, .filter-group select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+/* Summary Styling */
+.summary-container {
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.summary-container h3 {
+    font-size: 1.2rem;
+    color: #2E7D32;
+    font-weight: bold;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    margin-top: 10px;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+th {
+    background: #43A047;
+    color: #fff;
+}
+/* General Styling */
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background: #f7f9fc;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Introduction Page Styling */
+.intro-page {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(to bottom, #4CAF50, #2E7D32);
+    color: #fff;
+    min-height: 100vh;
+}
+
+.logo-container img {
+    width: 120px;
+    margin-bottom: 20px;
+}
+
+.features-list {
+    text-align: left;
+    display: inline-block;
+    margin: 20px auto;
+    padding-left: 0;
+}
+
+.features-list li {
+    margin-bottom: 10px;
+}
+
+.explore-btn {
+    padding: 10px 20px;
+    background-color: #ff9800;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+.explore-btn:hover {
+    background-color: #f57c00;
+}
+
+/* Transaction Manager Page */
+.transaction-page {
+    padding: 30px;
+    background: #fff;
+    min-height: 100vh;
+}
+/* Logo Styling */
+.logo-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.logo {
+    width: 120px;
+    height: auto;
+}
+
+/* Back Button */
+.back-btn {
+    margin: 10px 20px;
+    padding: 10px 15px;
+    font-size: 1rem;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    background-color: #388E3C;
+}
+/* Default styling (desktop) */
+body {
+    font-size: 16px;
+}
+
+.card {
+    width: 50%; /* Example size for larger screens */
+}
+
+/* Mobile styling (screens smaller than 768px) */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    .card {
+        width: 90%; /* Adjust size for smaller screens */
+    }
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+body {
+    font-size: 100%; /* Relative to device size */
+}
+button, input {
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+@media (max-width: 768px) {
+    .card {
+        width: 100%;
+        margin: 10px;
+    }
+}
+@media (max-width: 768px) {
+    button {
+        width: 100%;
+    }
+}
