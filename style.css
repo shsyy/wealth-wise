@@ -307,7 +307,7 @@ body {
 /* Transaction Manager Page */
 .transaction-page {
     padding: 30px;
-    background: #fff;
+    background: #43A047;
     min-height: 100vh;
 }
 /* Logo Styling */
@@ -326,8 +326,8 @@ body {
     margin: 10px 20px;
     padding: 10px 15px;
     font-size: 1rem;
-    background-color: #4CAF50;
-    color: #fff;
+    background-color: #f57c00;
+    color: rgb(216, 216, 216);
     border: none;
     border-radius: 8px;
     cursor: pointer;
@@ -335,7 +335,7 @@ body {
 }
 
 .back-btn:hover {
-    background-color: #388E3C;
+    background-color: #f57c00;
 }
 /* Default styling (desktop) */
 body {
