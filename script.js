@@ -9,8 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const categoryInput = document.getElementById('category');
     const dateInput = document.getElementById('date');
     const transactionTableBody = document.getElementById('transaction-table-body');
-    const totalIncomeEl = document.getElementById('total-income');
-    const totalExpensesEl = document.getElementById('total-expenses');
+    const balanceEl = document.getElementById('balance'); // Update ID to balance
     const searchInput = document.getElementById('search');
     const filterType = document.getElementById('filter-type');
 
@@ -36,8 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Function to render transactions in the table
     const renderTransactions = () => {
         transactionTableBody.innerHTML = ''; // Clear the table
-        let totalIncome = 0;
-        let totalExpenses = 0;
+        let balance = 0; // Calculate total balance
 
         transactions.forEach((transaction, index) => {
             const row = document.createElement('tr');
@@ -53,16 +51,15 @@ document.addEventListener('DOMContentLoaded', () => {
             `;
             transactionTableBody.appendChild(row);
 
-            // Calculate totals
+            // Calculate balance based on transaction type
             if (transaction.type === 'Income') {
-                totalIncome += parseFloat(transaction.amount);
+                balance += parseFloat(transaction.amount);
             } else {
-                totalExpenses += parseFloat(transaction.amount);
+                balance -= parseFloat(transaction.amount);
             }
         });
 
-        totalIncomeEl.textContent = totalIncome.toFixed(2);
-        totalExpensesEl.textContent = totalExpenses.toFixed(2);
+        balanceEl.textContent = balance.toFixed(2); // Update balance display
     };
 
     // Function to add a new transaction
@@ -110,11 +107,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const typeFilter = filterType.value;
         const filteredTransactions = typeFilter === 'All'
             ? transactions
-            : transactions.filter(t => t.type === typeFilter);
-
+            : transactions.filter(t => t.category === typeFilter || (typeFilter === 'None' && t.category === 'None'));
+    
         renderFilteredTransactions(filteredTransactions);
     });
-
+    
     // Function to search transactions
     searchInput.addEventListener('input', () => {
         const searchValue = searchInput.value.toLowerCase();
